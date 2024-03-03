@@ -3,7 +3,7 @@
   <div class="container px-4 mx-auto">
     <div class="flex flex-wrap -m-8">
       <div class="w-full md:w-1/2 p-8">
-        <div class="relative z-10 md:max-w-md">
+        <div class="relative md:max-w-md">
           <h2 class="mb-6 text-7xl text-white tracking-tighter-xl">
             Web Development
           </h2>

@@ -10,6 +10,7 @@ import ContactUs from './pages/ContactUs.vue'
 
 
 import '../tailwind.min.css'
+import './output.css'
 
 Vue.use(VueRouter);
 

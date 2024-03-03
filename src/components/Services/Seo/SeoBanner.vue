@@ -3,7 +3,7 @@
   <div class="container px-4 mx-auto">
     <div class="flex flex-wrap -m-8">
       <div class="w-full md:w-1/2 p-8">
-        <div class="relative z-10 md:max-w-md">
+        <div class="relative md:max-w-md">
           <h2 class="mb-6 text-7xl text-white tracking-tighter-xl">Search Engine Optimization</h2>
           <p class="mb-10 text-white text-opacity-60 md:max-w-xs">Empower your online presence with strategic SEO. Elevate your brand's visibility, outshine competitors, and establish a digital footprint that resonates with your target audience.</p>
           <a class="inline-block px-8 py-4 tracking-tighter bg-green-400 hover:bg-green-500 text-black focus:ring-4 focus:ring-green-500 focus:ring-opacity-40 rounded-full transition duration-300" href="#">Start now</a>

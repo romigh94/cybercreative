@@ -6,7 +6,7 @@
       <div class="flex flex-wrap items-center">
         <div class="w-auto mr-14">
           <a href="/">
-            <img src="../assets/logo.svg" alt="cybercreative" />
+            <img width="160" src="../assets/full-logo.png" alt="cybercreative" />
           </a>
         </div>
       </div>
@@ -19,7 +19,7 @@
               <li class="relative group">
               <div class="font-heading mr-9 text-white hover:text-gray-200 text-lg cursor-pointer">
                 <div @click="toggleDropdown($event)" class="flex items-center text-white hover:text-gray-200 text-lg cursor-pointer">
-    <span class="font-heading mr-2">Services</span>
+    <div class="font-heading mr-2">Services</div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -60,9 +60,9 @@
       </div>
     </div>
   </nav>
-  <div class="navbar-menu fixed top-0 right-0 bottom-0 w-4/6 sm:max-w-md" v-if="isMenuOpen" :class="{ opened: isMenuOpen, closed: !isMenuOpen }">
+  <div class="navbar-menu fixed top-0 right-0 bottom-0 w-4/6 sm:max-w-md" v-if="isMenuOpen" >
     <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-80"></div>
-    <nav class="relative z-10 px-9 py-8 bg-gray-900 h-full">
+    <nav class="burger-menu relative z-10 px-9 py-8 bg-gray-900 h-full" :class="{ opened: isMenuOpen, closed: !isMenuOpen }">
       <div class="flex flex-wrap justify-between h-full">
         <div class="w-full">
           <div class="flex items-center justify-between -m-2">
@@ -73,7 +73,7 @@
           </div>
         </div>
         <div class="flex flex-col justify-center py-8 w-full">
-          <ul>
+          <ul class="burger-links" :class="{ opened: isMenuOpen, closed: !isMenuOpen }">
             <li class="mb-12"><a class="font-heading font-medium text-lg text-white hover:text-gray-200" href="#">Features</a></li>
             <li class="mb-12"><a class="font-heading font-medium text-lg text-white hover:text-gray-200" href="#">Solutions</a></li>
             <li class="mb-12"><a class="font-heading font-medium text-lg text-white hover:text-gray-200" href="#">Resources</a></li>
@@ -117,18 +117,6 @@ export default {
 
     }
   },
-  watch: {
-    isMenuOpen(newValue) {
-      // Add a delay before applying the opened class to ensure the transition works properly
-      if (newValue) {
-        setTimeout(() => {
-          this.$el.querySelector('.navbar-menu').classList.add('opened');
-        }, 50);
-      } else {
-        this.$el.querySelector('.navbar-menu').classList.remove('opened');
-      }
-    }
-  }
 }
 </script>
 
@@ -150,8 +138,28 @@ export default {
   transition: transform 0.3s ease;
 }
 
-.navbar-menu {
-  transition: transform 1s ease;
+
+.burger-links, .burger-menu {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  animation: slideDown 1s ease-in-out;
+}
+
+.burger-links.opened, .burger-menu.opened {
+  max-height: 400px; /* Just ett exempelvärde, ändra efter behov */
+  opacity: 1;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 400px; /* Samma värde som .burger-links.opened */
+    opacity: 1;
+  }
 }
 
 

@@ -2,7 +2,7 @@
         <section class="relative py-8 overflow-hidden" style="background-color: #0E0F11;">
   <div class="container px-4 mx-auto">
     <div class="mb-20 md:max-w-xl text-center mx-auto">
-      <h2 class="text-7xl lg:text-8xl text-white tracking-tighter-xl">Our services</h2>
+      <h2 class="text-7xl  text-white tracking-tighter-xl">Our services</h2>
     </div>
     <div class="flex flex-wrap -m-4">
       <div class="flex w-full lg:w-1/3 p-4">
